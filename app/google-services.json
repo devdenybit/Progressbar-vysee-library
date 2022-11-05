@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "31342997368",
+    "project_id": "video-call-bb",
+    "storage_bucket": "video-call-bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31342997368:android:6b2214445864d363cfa28d",
+        "android_client_info": {
+          "package_name": "com.chaluvideocall.randomvideocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31342997368-8n3pljpke2d5ndftilrrnpeah16hoobr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUK8FOaHyO9EJnynpzlL30eB3GvBPHbDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31342997368-8n3pljpke2d5ndftilrrnpeah16hoobr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="Transparent" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="appRatingBar" parent="@style/AppTheme">
+        <item name="colorControlActivated">#ffcd43</item>
+        <item name="colorControlNormal">#cccccc</item>
+    </style>
+
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+        <item name="colorControlNormal">#A3A3A3</item>
+        <item name="colorControlActivated">#fbbe42</item>
+    </style>
+</resources>

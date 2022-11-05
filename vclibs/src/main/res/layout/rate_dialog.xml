@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b0000000">
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="178.0dip"
+                android:layout_height="140.0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="42.0dip"
+                android:background="@drawable/ic_rate" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40.0dip"
+                android:gravity="center"
+                android:text="Rate Us 5 Star"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#FF9800"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginEnd="30dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Support us by give 5 star and write your review"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="#757575" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/rb_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:orientation="horizontal"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:stepSize="1.0"
+                    android:theme="@style/MyRatingBar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_later"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="48.0dip"
+                android:layout_marginTop="15.0dip"
+                android:layout_marginEnd="48.0dip"
+                android:background="@drawable/rounded_info"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Rate Now"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:textColor="#FFF4F4"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Maybe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="18sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="Maybe Later"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="#999999" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

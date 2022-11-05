@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        tools:context=".unitlity.TestActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/surface_view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/tv_report"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="end"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center|end"
+                        android:onClick="TBtnReportUser"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/report" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_above="@+id/iv_cancel"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="@dimen/_5sdp">
+
+                    <org.webrtc.SurfaceViewRenderer
+                        android:id="@+id/surface_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/camera_preview"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:layout_above="@+id/iv_cancel"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="@dimen/_5sdp" />
+
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:onClick="CanaclToCall"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/calling" />
+
+                <RelativeLayout
+                    android:id="@+id/bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_camera"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/camera"
+                        android:onClick="switchCameraEvent"
+                        android:padding="10dp" />
+
+                    <ImageView
+                        android:id="@+id/audio_mute"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_below="@+id/iv_camera"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/mic_on"
+                        android:onClick="audioMuteEvent" />
+
+                    <ImageView
+                        android:id="@+id/audio_speaker"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_below="@+id/audio_mute"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/on_speker"
+                        android:onClick="speakerONOFFEvent" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/connection_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cancel_connect"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_cancel" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ntiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/all_native" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cntr_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_30sdp"
+                    android:text="00:00"
+                    android:textColor="#E91E63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/anim_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_info"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:letterSpacing="0.1"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="Waiting for User"
+                    android:textColor="#686868"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:text="This will take some time to connect call to live user who waiting for video call"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

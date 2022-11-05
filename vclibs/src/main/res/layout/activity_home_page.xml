@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activties.HomePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/banr"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp">
+
+            <ImageView
+                android:id="@+id/backs"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:foreground="@drawable/round_ripple"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:gravity="center"
+                android:text="Video Call"
+                android:textColor="#000000"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/animationView_qureka"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/all_native" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_100sdp">
+
+                    <LinearLayout
+                        android:id="@+id/call_timer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animationView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_130sdp"
+                            android:foreground="@drawable/square_ripple"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/wait" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="You Can Call In"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="monospace"
+
+                            android:gravity="center"
+                            android:text="00:00"
+                            android:textColor="#E91E63"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btn_click"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                       android:layout_marginTop="@dimen/_100sdp"
+                        android:layout_marginHorizontal="@dimen/_40sdp"
+                        android:background="@drawable/bg_gradient_btn"
+                        android:foreground="@drawable/round_ripple"
+                        android:gravity="center"
+                        android:letterSpacing="0.1"
+                        android:text="Video Call"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/btn_click"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="@dimen/_50sdp"-->
+                    <!--                        android:layout_marginHorizontal="20dp"-->
+                    <!--                        android:layout_marginBottom="@dimen/_50sdp"-->
+                    <!--                        android:background="@drawable/bg_round"-->
+                    <!--                        android:backgroundTint="#E91E63"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:text="Connect Video CAll"-->
+                    <!--                        android:textColor="@color/policy_color"-->
+                    <!--                        android:textSize="18sp"-->
+                    <!--                        android:visibility="" />-->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/banr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <include layout="@layout/all_banner" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+

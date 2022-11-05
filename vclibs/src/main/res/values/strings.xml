@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chat Video Call</string>
+    <string name="retry">Retry Again</string>
+    <string name="connect_internet">Please Connect To Internet</string>
+    <string name="err_somethingwentwrong">Something went wrong !</string>
+
+</resources>
